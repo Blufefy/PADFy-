@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="manifest" href="manifest.json" />
+
+</head>
+<body>
+    <header>
+        <h1>Note-Taking App</h1>
+        <input type="search" id="search-input" placeholder="Search notes...">
+    </header>
+    <main>
+        <section id="note-list">
+            <h2>Notes</h2>
+            <ul id="note-list-items">
+                <!-- Note items will be rendered here -->
+            </ul>
+        </section>
+        <section id="note-editor">
+            <h2>New Note</h2>
+            <input type="text" id="note-title" placeholder="Title">
+            <textarea id="note-content" placeholder="Content"></textarea>
+            <input type="text" id="note-tags" placeholder="Tags (separate with commas)">
+            <button id="save-note-btn">Save Note</button>
+        </section>
+    </main>
+    <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+    <script src="script.js"></script>
+        <script src="sw.js"></script>
+</body>
+</html>
